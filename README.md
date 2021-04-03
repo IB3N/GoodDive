@@ -1,6 +1,9 @@
-# Good Dive? (goodive.com)
+# Good Dive?
 
-### A simple website where users can rate and review the dive sites of Una-Una, Sulawesi, Indonesia
+![GoodDive?](/static/images/GoodDive.png)
+
+## A simple website where users can rate and review the dive sites of Una-Una, Sulawesi, Indonesia
+
 Good Dive? is a web based application using HTML, CSS, JavaScript, Python and SQL, also utilising the Flask python module and the Lux bootstrap theme.
 
 The website is quite basic: a simple navbar with options to view Una Una information, a dive site map with a list of the sites, a top 5 dive site dropdown, an about Good Dive? page and register & login or logout views depending on if the user is logged in or not.
@@ -18,8 +21,8 @@ Each dive site page shows the dive site name and rating above the fold, and foll
 > - Dive centre and dive guide
 > - Morning/afternoon/night dive
 
-
 ### The Program
+
 I have one main flask application file which most of my website runs from and one additional blueprint for the edit and delete comments functions. The functions/routes in my main application file are as follows: index, register, login, logout, una-una, sites, about, divesite and an error handler.
 
 Alongside this, I have a seperate functions file which the two main flask files detailed above import from to streamline and reduce the amount of code on one page. Most functions consist of SQL SELECT, INSERT, UPDATE or DELETE for users, dive site or comment information, plus a couple of error checking functions.
@@ -41,6 +44,7 @@ I have added front-end error checking with JavaScript to ensure that the user co
 I am sure my program is terribly inefficient or too memory heavy as I pass each render_template/webpage a lot of information. I was part of the 2/3 of people taking CS50 that had never coded anything before so this whole course was a huge learning curve for me. In the first week I got cold sweats thinking about my final project - "how I would manage to build something myself?!?!". It was an extremely compelling moment for me to realise I had been writing my final project in 5 different languages (albeit quite simply for some).
 
 ### The story of Good Dive?'s inception
+
 As with many people in the world, due to COVID I have lost my job working as a dive instructor for the next year on the beautiful, little island in which this website is based called Una Una, Sulawesi.
 I did my PADI Divemaster training at Pristine Paradise Dive Resort, Una Una in early 2019 and got to know all the dive sites extremely well.
 Later on that year I went back to co-manage and run the dive centre, working as a Divemaster alongside my partner Sarina. With each new set of guests, we would be explaining and detailing the best dive sites to visit.
