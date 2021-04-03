@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ code }}
+{% endblock %}
+
+{% block main %}
+    <div class="apology background-img">
+        <h1 class="centre text-center text-white display-4">{{ code }} - {{ error }}</h1>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <div class="footer text-white">
+        <p>&copy; Ben Pearce 2020</p>
+    </div>
+{% endblock %}

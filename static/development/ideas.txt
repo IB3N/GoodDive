@@ -1,0 +1,33 @@
+#BACKGROUND INFO
+I want to implement a simple website that allows users to supply feedback about the dive sites of Una Una.
+Feedback in the form of ratings or upvotes/downvotes, comments, pictures and the species seen there, while
+also being able to add dive specific feedback in the form of conditions, visibility, depth, dive times, etc.
+Maybe also a would dive again/would not dive again rating system.
+
+
+#AIM
+To enable future divers of Una Una to access dive site information. To arrive at a dive centre armed with
+prior knowledge of where they want to go, and be able to leave feedback once they have left or post-dive.
+
+
+#IDEAS
+Homepage with nav bar - keep it simple
+Una Una info page
+How to use site
+Dive site directory page with all dive sites listed
+Maybe sort by rating, alphabet
+Individual dive site pages
+Feedback forms
+Comments
+Picture adding etc etc
+Top 5 sites page / Must dive page
+Pristine/staff recommends page
+Recent posts page showing 5 or more recent posts
+
+### TOP SITES FUNCTION
+@app.route('/top_sites')
+def top_sites():
+    """ Show user top sites """
+    return render_template('/nav/topsites.html', top=rank_sites(), dropdown=sites_all(), top_five=top_five())
+
+b'=\x91\x1c\xe02B\xaas\xb4\xce\x05\xfa\x87o \xdb'

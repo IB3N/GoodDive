@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="keywords" content="scuba, diving, underwater, dive, site, divesite, rating">
+        <meta name="description" content="Rate the divesites of Una-Una">
+        <meta name="author" content="Ben Pearce">
+
+        <!-- Bootswatch spacelab css file, downloaded from https://bootswatch.com/ -->
+        <link href="/static/css/lux.css" rel="stylesheet">
+
+        <!-- My stylesheet -->
+        <link href="/static/css/styles.css" rel="stylesheet">
+
+        <!-- Link to my favicon -->
+        <link rel="shortcut icon" href="/static/images/layout/favicon.ico">
+
+        <title>{% block title %}{% endblock %} - Good Dive?</title>
+
+    </head>
+
+    <body class="site-layout-wrapper">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-transparent">
+            <!-- Image created by Sarina Singh-Khaira
+                 Specially created for my website -->
+            <a class="navbar-brand" href="{{ url_for('index') }}"><img src="/static/images/layout/gdlogo.png" id="favicon" alt="Scuba diving favicon for good dive"></a>
+            <a class="navbar-brand" href="{{ url_for('index') }}">Good Dive?</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('una_una') }}">Una-Una</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                            <a class="nav-link" href="{{ url_for('sites') }}">Sites</a>
+                            <div class="btn-group" role="group">
+                            <div id="btnGroupDrop1" type="button" class="btn bg-transparent dropdown-toggle dropdown-color hover-bg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding-left: 0%; padding-top: 30%;"></div>
+                                <div class="dropdown-menu bg-primary border-0" aria-labelledby="btnGroupDrop1" style="">
+                                    <div class="row" style="min-width: 30vw;">
+                                        <div class="col-6">
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='abyss') }}">Abyss</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='apollo') }}">Apollo</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='artemis') }}">Artemis</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='atlantis') }}">Atlantis</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='barrenland') }}">Barrenland</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='batugila') }}">Batu Gila</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='berndland') }}">Berndland</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='blackforest') }}">Black Forest</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='chinatown') }}">China Town</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='ghosttown') }}">Ghost Town</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='gorner') }}">Gorner</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='gretasplace') }}">Greta's Place</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='hongkong') }}">Hong Kong</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='housereef') }}">House Reef</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='ihana') }}">Ihana</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='jackpoint') }}">Jackpoint</a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='jetty') }}">Jetty</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='jungle') }}">Jungle</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='kingstonwall') }}">Kingston Wall</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='littleindia') }}">Little India</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='mnm') }}">M & M</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='mandiri') }}">Mandiri</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='menaraii') }}">Menara II</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='pinnacle1') }}">Pinnacle I</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='pinnacle2') }}">Pinnacle II</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='pumpuli') }}">Pumpuli</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='satellite') }}">Satellite</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='stingraycity') }}">Stingray City</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='therocks') }}">The Rocks</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='tutturuga') }}">Tutturuga</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='valtimo') }}">Valtimo</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='walle') }}">Wall-E</a>
+                                            <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename='wreckjam') }}">Wreck & Jam</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Top 10</a>
+                        <div class="dropdown-menu bg-primary border-0">
+                            {% for site in top_sites %}
+                                <a class="dropdown-item font-weight-bold hover-bg text-white" href="{{ url_for('divesite', sitename=site['name']) }}">{{ site['display_name'] }}</a>
+                            {% endfor %}
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                    </li>
+                </ul>
+                {% if session.user_id %}
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
+                        </li>
+                    </ul>
+                {% else %}
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('register') }}">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('login') }}">Log In</a>
+                        </li>
+                    </ul>
+                {% endif %}
+            </div>
+        </nav>
+
+        <main>
+            {% block main %}{% endblock %}
+        </main>
+
+        <footer>
+                {% block footer %}{% endblock %}
+        </footer>
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <!-- My JavaScript -->
+        <script src="/static/script/scripts.js"></script>
+    </body>
+
+</html>

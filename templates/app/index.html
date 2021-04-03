@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Welcome
+{% endblock %}
+
+{% block main %}
+    <div class="homepage-img background-img">
+        <div class="homepage-headline col-md-5">
+            <img id="home-logo" src="/static/images/templates/logo.png" alt="The good dive logo">
+            <h3 class="text-white">Check out and rate Una-Una's best dive sites</h3>
+        </div>
+    </div>
+
+    <div>
+        {% for comment in recent_comments %}
+            <article class="comments">
+                <div class="card bg-primary text-info border-white">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            {{ comment['title'] }}
+                        </h4>
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            {% if comment['rating'] == 1 %}
+                                <img class="rating-star" src="/static/images/layout/starog.png" alt="star rating">
+                            {% elif comment['rating'] == 2 %}
+                                <img class="rating-star" src="/static/images/layout/starog.png" alt="star rating">
+                                <img class="rating-star" src="/static/images/layout/starog.png" alt="star rating">
+                            {% elif comment['rating'] == 3 %}
+                                <img class="rating-star" src="/static/images/layout/starog.png" alt="star rating">
+                                <img class="rating-star" src="/static/images/layout/starog.png" alt="star rating">
+                                <img class="rating-star" src="/static/images/layout/starog.png" alt="star rating">
+                            {% elif comment['rating'] == 4 %}
+                                <img class="rating-star" src="/static/images/layout/starog.png" alt="star rating">
+                                <img class="rating-star" src="/static/images/layout/starog.png" alt="star rating">
+                                <img class="rating-star" src="/static/images/layout/starog.png" alt="star rating">
+                                <img class="rating-star" src="/static/images/layout/starog.png" alt="star rating">
+                            {% else %}
+                                <img class="rating-star" src="/static/images/layout/starog.png" alt="star rating">
+                                <img class="rating-star" src="/static/images/layout/starog.png" alt="star rating">
+                                <img class="rating-star" src="/static/images/layout/starog.png" alt="star rating">
+                                <img class="rating-star" src="/static/images/layout/starog.png" alt="star rating">
+                                <img class="rating-star" src="/static/images/layout/starog.png" alt="star rating">
+                            {% endif %}
+                        </h6>
+                        <br/>
+                        <p class="card-text">{{ comment['comment'] }}</p>
+                        <br/>
+                        <span class="card-link">
+                            <small class="posted-by">Posted by {{ comment['username'] }} - {{ comment['created'] }}</small>
+                        </span>
+                        {% if session.user_id == comment['user_id'] %}
+                            <a class="comment-edit-link text-white card-link" href="{{ url_for('comments.edit', id=comment['id']) }}">Edit</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </article>
+            {% if not loop.last %}
+            <br/>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <div class="footer-btf text-white">
+        <p>&copy; Ben Pearce 2020</p>
+    </div>
+{% endblock %}

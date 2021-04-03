@@ -1,0 +1,84 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Edit
+{% endblock %}
+
+{% block main %}
+    <div class="edit-img background-img">
+        <div class="edit">
+            <div class="border-0">
+                <h1 class="text-white text-center">
+                    Edit comment
+                </h1>
+                <form method="post">
+                    <div class="form-group">
+                        <input class="form-control" autocomplete="off" name="title" id="title" value="{{ request.form['title'] or comment[0]['title'] }}" required>
+                        <textarea class="form-control" autofocus autocomplete="off" name="comment" id="comment" required>{{ request.form['comment'] or comment[0]['comment'] }}</textarea>
+                    </div>
+                    <div class="row justify-content-between">
+                        <div class="col">
+                            <div class="form-group">
+                                {% if comment[0]['rating'] == 1 %}
+                                    <select class="form-control" required name="rating" id="rating">
+                                        <option value="1" selected>1 Star</option>
+                                        <option value="2">2 Star</option>
+                                        <option value="3">3 Star</option>
+                                        <option value="4">4 Star</option>
+                                        <option value="5">5 Star</option>
+                                    </select>
+                                {% elif comment[0]['rating'] == 2 %}
+                                    <select class="form-control" required name="rating" id="rating">
+                                        <option value="1">1 Star</option>
+                                        <option value="2" selected>2 Star</option>
+                                        <option value="3">3 Star</option>
+                                        <option value="4">4 Star</option>
+                                        <option value="5">5 Star</option>
+                                    </select>
+                                {% elif comment[0]['rating'] == 3 %}
+                                    <select class="form-control" required name="rating" id="rating">
+                                        <option value="1">1 Star</option>
+                                        <option value="2">2 Star</option>
+                                        <option value="3" selected>3 Star</option>
+                                        <option value="4">4 Star</option>
+                                        <option value="5">5 Star</option>
+                                    </select>
+                                {% elif comment[0]['rating'] == 4 %}
+                                    <select class="form-control" required name="rating" id="rating">
+                                        <option value="1">1 Star</option>
+                                        <option value="2">2 Star</option>
+                                        <option value="3">3 Star</option>
+                                        <option value="4" selected>4 Star</option>
+                                        <option value="5">5 Star</option>
+                                    </select>
+                                {% elif comment[0]['rating'] == 5 %}
+                                    <select class="form-control" required name="rating" id="rating">
+                                        <option value="1">1 Star</option>
+                                        <option value="2">2 Star</option>
+                                        <option value="3">3 Star</option>
+                                        <option value="4">4 Star</option>
+                                        <option value="5" selected>5 Star</option>
+                                    </select>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="text-right col">
+                            <button type="submit" class="btn btn-secondary edit-buttons">Save</button>
+                        </div>
+                    </div>
+                </form>
+                <div>
+                    <form action="{{ url_for('comments.delete', id=comment[0]['id']) }}" method="post">
+                        <button type="submit" class="btn btn-danger edit-buttons" style="float: right" onclick="return confirm("Are you sure?");">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <div class="footer text-white">
+        <p>&copy; Ben Pearce 2020</p>
+    </div>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sites
+{% endblock %}
+
+{% block main %}
+    <div class="sites-img background-img">
+        <div class="site-map">
+            <img class="img-fluid" src="/static/images/templates/sitemap.png" alt="Map of una una island with numbered dive sites">
+            <span>
+                <h1 class="text-white sites-header display-4" id="the-sites-above">Dive Sites</h1>
+            </span>
+        </div>
+        <p class="footer text-white">List below</p>
+    </div>
+    <br/>
+    <h1 class="text-center text-white" id="the-sites-below">The Dive Sites</h1>
+    <div class="container text-white site-list">
+        <div class="row">
+            <ol class="col-4">
+                <li><a href="{{ url_for('divesite', sitename="gorner") }}">Gorner</a></li>
+                <li><a href="{{ url_for('divesite', sitename="mandiri") }}">Mandiri</a></li>
+                <li><a href="{{ url_for('divesite', sitename="jackpoint") }}">Jack Point</a></li>
+                <li><a href="{{ url_for('divesite', sitename="abyss") }}">Abyss</a></li>
+                <li><a href="{{ url_for('divesite', sitename="walle") }}">Wall-E</a></li>
+                <li><a href="{{ url_for('divesite', sitename="blackforest") }}">Black Forest</a></li>
+                <li><a href="{{ url_for('divesite', sitename="littleindia") }}">Little India</a></li>
+                <li><a href="{{ url_for('divesite', sitename="menaraii") }}">Menara II</a></li>
+                <li><a href="{{ url_for('divesite', sitename="kingstonwall") }}">Kingston Wall</a></li>
+                <li><a href="{{ url_for('divesite', sitename="jetty") }}">Jetty</a></li>
+                <li><a href="{{ url_for('divesite', sitename="tutturuga") }}">Tutturuga</a></li>
+                <li><a href="{{ url_for('divesite', sitename="gretasplace") }}">Greta's Place</a></li>
+                <li><a href="{{ url_for('divesite', sitename="satellite") }}">Satellite</a></li>
+                <li><a href="{{ url_for('divesite', sitename="pinnacle2") }}">Pinnacle II</a></li>
+                <li><a href="{{ url_for('divesite', sitename="m&m") }}">M & M</a></li>
+                <li><a href="{{ url_for('divesite', sitename="valtimo") }}">Valtimo</a></li>
+            </ol>
+            <ol class="col-4" start="17">
+                <li><a href="{{ url_for('divesite', sitename="pumpuli") }}">Pumpuli</a></li>
+                <li><a href="{{ url_for('divesite', sitename="pinnacle1") }}">Pinnacle I</a></li>
+                <li><a href="{{ url_for('divesite', sitename="wreckjam") }}">Wreck & Jam</a></li>
+                <li><a href="{{ url_for('divesite', sitename="housereef") }}">House Reef</a></li>
+                <li><a href="{{ url_for('divesite', sitename="ghosttown") }}">Ghost Town</a></li>
+                <li><a href="{{ url_for('divesite', sitename="therocks") }}">The Rocks</a></li>
+                <li><a href="{{ url_for('divesite', sitename="ihana") }}">Ihana</a></li>
+                <li><a href="{{ url_for('divesite', sitename="jungle") }}">Jungle</a></li>
+                <li><a href="{{ url_for('divesite', sitename="barrenland") }}">Barren Land</a></li>
+                <li><a href="{{ url_for('divesite', sitename="berndland") }}">Bernd Land</a></li>
+                <li><a href="{{ url_for('divesite', sitename="hongkong") }}">Hong Kong</a></li>
+                <li><a href="{{ url_for('divesite', sitename="chinatown") }}">China Town</a></li>
+                <li><a href="{{ url_for('divesite', sitename="stingraycity") }}">Stingray City</a></li>
+                <li><a href="{{ url_for('divesite', sitename="atlantis") }}">Atlantis</a></li>
+                <li><a href="{{ url_for('divesite', sitename="apollo") }}">Apollo</a></li>
+                <li><a href="{{ url_for('divesite', sitename="batugila") }}">Batu Gila</a></li>
+                <li><a href="{{ url_for('divesite', sitename="artemis") }}">Artemis</a></li>
+            </ol>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <div class="footer-btf text-white">
+        <p>&copy; Ben Pearce 2020</p>
+    </div>
+{% endblock %}

@@ -1,0 +1,357 @@
+/* ==========================
+         General
+   ========================== */
+
+.background-img
+{
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-color: #1a1a1a;
+}
+.centre
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#favicon
+{
+    width: 90px;
+    height: auto;
+    margin-top: -30px;
+    margin-right: -40px;
+}
+/* Above the fold footer */
+.footer
+{
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+/* Below the fold footer */
+.footer-btf
+{
+    text-align: center;
+}
+.line-spacing
+{
+    line-height: 150%;
+}
+.card-width
+{
+    max-width: 80%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.text-black
+{
+    color: black;
+}
+.hover-bg:hover
+{
+    color: white;
+}
+.dropdown-color
+{
+    color: LightGray;
+}
+/* ==========================
+       Homepage / Index
+   ========================== */
+
+.homepage-img
+{
+    background-image: url("/static/images/background/index.jpg");
+    background-position: right bottom;
+}
+.homepage-headline
+{
+    text-align: center;
+    position: absolute;
+    top: 14%;
+    left: 5%;
+}
+#home-logo
+{
+    width: 60%;
+    height: auto;
+}
+@media only screen and (max-width:770px)
+{
+    .homepage-headline
+    {
+        left: 0%;
+    }
+}
+/* ==========================
+         Apology / Error
+   ========================== */
+
+.apology
+{
+    background-image: url("/static/images/background/apology.jpg");
+}
+
+/* ==========================
+         Register
+   ========================== */
+
+.register-img
+{
+    background-image: url("/static/images/background/register.jpg");
+    background-position: bottom;
+}
+.password-hint
+{
+    width: 15rem;
+    max-width: inherit;
+    font-weight: bold;
+}
+
+/* ==========================
+         Login
+   ========================== */
+
+.login-img
+{
+    background-image: url("/static/images/background/login.jpg");
+    background-position: bottom;
+}
+
+/* ==========================
+         Una Una
+   ========================== */
+
+.una-una-img
+{
+    background-image: url("/static/images/background/unauna.jpg");
+    background-position: center;
+}
+.una-una-headline
+{
+    text-align: left;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+.una-una-info
+{
+    text-align: center;
+    background-color: #1a1a1a;
+}
+
+/* ==========================
+         Sites
+   ========================== */
+
+.site-map
+{
+    max-width: 95%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(0%, -45%);
+}
+.sites-img
+{
+    background-image: url("/static/images/background/sites.jpg");
+    background-position: bottom;
+}
+.sites-header
+{
+    width: 20vw;
+    height: 100vh;
+    position: absolute;
+    top: 30%;
+    left: 100%;
+    text-align: center;
+}
+@media only screen and (max-width: 700px)
+{
+    .site-list
+    {
+        position: relative;
+        left: 40%;
+        transform: translate(-20%, 0%);
+    }
+}
+@media only screen and (min-width: 701px)
+{
+    .site-list
+    {
+        position: relative;
+        max-width: 65%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+}
+ol li a
+{
+    font-weight: bold;
+    color: #1F9BCF;
+}
+ol li a:hover
+{
+    color: #1F9BCF;
+}
+@media only screen and (max-width: 800px)
+{
+  #the-sites-above
+  {
+      display: none;
+  }
+}
+@media only screen and (min-width: 801px)
+{
+    #the-sites-below
+    {
+        display: none;
+    }
+}
+
+/* ==========================
+         About
+   ========================== */
+.about
+{
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    position: relative;
+    background-color: #343a40;
+    text-align: center;
+}
+.logo
+{
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.about-heading
+{
+    text-align: center;
+}
+.about-p
+{
+    font-size: 2vw;
+}
+.no-list-style
+{
+    list-style: none;
+}
+.ideas
+{
+    text-align: left;
+    max-width: 50%;
+    position: relative;
+    left: 60%;
+    transform: translate(-50%, 0%);
+}
+/* ==========================
+         Sitelayout
+   ========================== */
+
+.site-layout-wrapper
+{
+    background-color: #1a1a1a;
+}
+.site-layout-img
+{
+    background-image: url("/static/images/background/sitelayout.jpg");
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: bottom;
+}
+.site-name
+{
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.site-rating
+{
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.create-comment
+{
+    text-align: center;
+    max-width: 80%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    position: relative;
+}
+.comment-edit-link
+{
+    float: right;
+}
+.comments
+{
+    max-width: 80%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    position: relative;
+}
+.comment-edit
+{
+    float: right;
+}
+.posted-by
+{
+    color: gray;
+}
+.rating-star
+{
+    height: 25px;
+    width: auto;
+}
+.comment-stars
+{
+    float: right;
+    clear: right;
+}
+.sites-footer
+{
+    margin-top: 2%;
+}
+.site-description
+{
+    margin: 0;
+}
+
+/* ==========================
+         Edit Comment
+   ========================== */
+
+.edit-img
+{
+    background-image: url("/static/images/background/edit.jpg");
+    background-position: top;
+}
+.edit
+{
+    max-width: 80%;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    position: relative;
+}
+.edit-buttons
+{
+    width: 6rem;
+}
